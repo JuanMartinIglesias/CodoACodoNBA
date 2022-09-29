@@ -1,0 +1,17 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/** Body**/
+body {
+    width: 80%;
+    background-color: darkslateblue;
+}
+
+/** Header**/
+.header {
+    height: 200px;
+    background-color:lightblue;
+    color: black;
+}

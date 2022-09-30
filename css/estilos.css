@@ -3,15 +3,71 @@
     margin: 0px;
 }
 
-/** Body**/
 body {
-    width: 80%;
-    background-color: darkslateblue;
-}
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-/** Header**/
-.header {
-    height: 200px;
-    background-color:lightblue;
-    color: black;
-}
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header'
+      'navbar navbar navbar navbar navbar navbar' 
+      'aside contenido contenido contenido contenido contenido' 
+      'footer footer footer footer footer footer';  
+    grid-gap: 10px;
+  }
+
+    /* propiedades generales mientras acomodamos el css */
+    .header,
+    .navbar,
+    .aside,
+    .contenido,
+    .footer
+    {
+      background-color: lightgray;
+      border: solid 1px black;
+      text-align: center;
+    }
+
+  /* Header */
+  .header {
+    grid-area: header;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  /* navbar */
+  .navbar {
+    grid-area: navbar;
+  }
+  
+  /* aside */
+  .aside {
+    grid-area: aside;
+  }
+  
+  /* contenido */
+  .contenido {
+    grid-area: contenido;
+  }
+  
+  /* footer */
+  .footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+  }
+
+      /* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
+      @media (max-width: 600px) {
+        .grid-container  {
+          grid-template-areas: 
+            'header header header header header header'
+            'navbar navbar navbar navbar navbar navbar' 
+            'aside aside aside aside aside aside' 
+            'contenido contenido contenido contenido contenido contenido' 
+            'footer footer footer footer footer footer';
+        }
+    }

@@ -36,11 +36,24 @@ body {
     padding: 30px;
     text-align: center;
     font-size: 35px;
+    background-image: url('../imagenes/LogoCAB_2021-155x214.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 5% 5%;
+    min-height: 250px;
   }
 
   /* navbar */
   .navbar {
     grid-area: navbar;
+    padding: 10px;
+  }
+
+  .navbar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: black;
   }
   
   /* aside */

@@ -1,0 +1,110 @@
+/* fuentes */
+/* font-family: 'Lato', sans-serif; */
+/* font-family: 'PT Sans', sans-serif; */
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Lato', 'PT Sans', sans-serif;
+    width: 90%;
+    margin: auto;
+  }
+
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header'
+      'navbar navbar navbar navbar navbar navbar' 
+      'aside contenido contenido contenido contenido contenido' 
+      'footer footer footer footer footer footer';  
+    grid-gap: 10px;
+  }
+
+    /* propiedades generales mientras acomodamos el css */
+    .header,
+    .navbar,
+    .aside,
+    .contenido,
+    .articulo,
+    .footer
+    {
+      background-color: DarkSlateGray;
+      border: solid 1px lightgrey;
+      text-align: center;
+      color: white;
+    }
+
+  /* Header */
+  .header {
+    grid-area: header;
+    padding: 30px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    background-image: url('../imagenes/LogoCAB_2021-155x214.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 5% 5%;
+    min-height: 250px;
+  }
+
+  /* navbar */
+  .navbar {
+    grid-area: navbar;
+    padding: 10px;
+  }
+
+  .navbar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: white;
+  }
+  
+  /* aside */
+  .aside {
+    grid-area: aside;
+  }
+
+  .aside a {
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  /* contenido */
+  .contenido {
+    grid-area: contenido;
+  }
+
+/* articulo */
+  .articulo{
+  margin: 20px;
+  padding: 10px;
+  font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+  }
+
+  /* footer */
+  .footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+  }
+
+      /* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
+      @media (max-width: 600px) {
+        .grid-container  {
+          grid-template-areas: 
+            'header header header header header header'
+            'navbar navbar navbar navbar navbar navbar' 
+            'aside aside aside aside aside aside' 
+            'contenido contenido contenido contenido contenido contenido' 
+            'footer footer footer footer footer footer';
+        }
+    }

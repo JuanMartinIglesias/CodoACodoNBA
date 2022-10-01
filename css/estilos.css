@@ -10,11 +10,12 @@
 
 body {
     font-family: 'Lato', 'PT Sans', sans-serif;
-    width: 90%;
-    margin: auto;
+    margin: 0 5%;
+    background-color: SlateGray;
+    color: white;
   }
 
-  /* The grid container */
+  /* grid container */
   .grid-container {
     display: grid;
     grid-template-areas: 
@@ -33,13 +34,12 @@ body {
     .articulo,
     .footer
     {
-      background-color: DarkSlateGray;
+      background-color: DimGray;
       border: solid 1px lightgrey;
       text-align: center;
-      color: white;
     }
 
-  /* Header */
+  /* header */
   .header {
     grid-area: header;
     padding: 30px;
@@ -48,8 +48,8 @@ body {
     font-size: 30px;
     background-image: url('../imagenes/LogoCAB_2021-155x214.png');
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 5% 5%;
+    background-attachment: local;
+    background-position: 10%;
     min-height: 250px;
   }
 
@@ -65,6 +65,10 @@ body {
     font-size: 1.25em;
     color: white;
   }
+
+  .navbar a:hover {
+    color: CadetBlue;
+  }
   
   /* aside */
   .aside {
@@ -76,18 +80,39 @@ body {
     padding: 10px;
     display: block;
     text-decoration: none;
+    color: white; 
   }
   
+  .aside a:hover {
+    color: CadetBlue;
+  }
   /* contenido */
   .contenido {
     grid-area: contenido;
   }
 
 /* articulo */
-  .articulo{
+  .articulo {
   margin: 20px;
   padding: 10px;
   font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 400;
+  }
+
+  /* articulo titulo */
+  .articulo h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 10px 0px;
+  }
+
+  /* articulo parrafo */
+  .articulo p {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 10px 0px; 
   }
 
   /* footer */

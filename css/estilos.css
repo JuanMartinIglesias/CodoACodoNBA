@@ -23,7 +23,7 @@ body {
       'navbar navbar navbar navbar navbar navbar' 
       'aside contenido contenido contenido contenido contenido' 
       'footer footer footer footer footer footer';  
-    grid-gap: 10px;
+    grid-gap: 0px;
   }
 
     /* propiedades generales mientras acomodamos el css */
@@ -105,17 +105,22 @@ body {
   .articulo h2 {
     font-size: 1.5em;
     font-weight: 600;
-    margin: 10px 0px;
+    margin: 10px 10px;
   }
 
   /* articulo parrafo */
   .articulo-textos {
     font-size: 1em;
     font-weight: 400;
-    margin: 10px 0px;
+    /* margin: 10px 0px; */
     display: inline-block;
     vertical-align: top;
     width: 70%; 
+  }
+
+  /* espacio entre parrafos del bloque articulo-textos */
+  .articulo-textos p {
+    margin: 10px 0px;
   }
 
   /* imagen artidulo */
@@ -130,8 +135,38 @@ body {
   /* footer */
   .footer {
     grid-area: footer;
-    padding: 10px;
-    text-align: center;
+    padding: 10px;    
+  }
+
+  /* cada bloque del footer */
+  .footer div {
+    border-radius: 10px;
+    border: solid 1px white;
+    max-width: 25%;
+    display: inline-block;
+    justify-content: space-between;
+    vertical-align: top;
+    text-align: left;
+    margin: 20px 20px;
+    padding: 25px;
+  }
+
+  .footer div h2 {
+    margin: 15px;
+  }
+
+  .footer div p {
+    margin: 10px;
+  }
+
+.footer-social{
+  display: inline-block;
+}
+
+  .footer-social a i {
+    color: white;
+    size: 20px;
+    margin: 10px;
   }
 
       /* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */

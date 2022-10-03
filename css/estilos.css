@@ -161,27 +161,32 @@ font-style: italic;
     padding: 10px;    
     font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
     color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
   /* cada bloque del footer */
   .footer-bloque {
     border-radius: 10px;
     border: solid 1px white;
+    flex: 1 1 auto;
     max-width: 25%;
-    display: inline-block;
     vertical-align: top;
     text-align: left;
-    margin: 20px 10px;
+    margin: 20px auto;
     padding: 25px;
+    display: block;
   }
 
   .footer div h2 {
     margin: 15px;
   }
 
-  .footer div p {
+.footer div p {
     margin: 10px;
-  }
+} 
 
 .footer-social a {
   width: 100%;
@@ -190,13 +195,13 @@ font-style: italic;
   color: white;
 }
 
-  .footer-social a i {
+.footer-social a i {
     color: white;
     size: 20px;
     margin: 10px;
-  }
+}
 
-  .footer-bloque p i {
+.footer-bloque p i {
     color: white;
     size: 20px;
     margin: 10px;

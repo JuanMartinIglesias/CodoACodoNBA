@@ -1,74 +1,73 @@
 * {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-    font-family: 'Lato', 'PT Sans', sans-serif;
-    margin: 0 5%;
-    background-color: SlateGray;
-    color: white;
-  }
+  font-family: 'Lato', 'PT Sans', sans-serif;
+  margin: 0 5%;
+  background-color: SlateGray;
+  color: white;
+}
 
-  /* grid container */
+/* grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'aside contenido contenido contenido contenido contenido'
+    'footer footer footer footer footer footer';
+  grid-gap: 0px;
+}
+
+/* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
+@media (max-width: 600px) {
   .grid-container {
-    display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       'header header header header header header'
-      'navbar navbar navbar navbar navbar navbar' 
-      'aside contenido contenido contenido contenido contenido' 
-      'footer footer footer footer footer footer';  
-    grid-gap: 0px;
+      'navbar navbar navbar navbar navbar navbar'
+      'aside aside aside aside aside aside'
+      'contenido contenido contenido contenido contenido contenido'
+      'footer footer footer footer footer footer';
   }
+}
 
-  /* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
-  @media (max-width: 600px) {
-    .grid-container  {
-      grid-template-areas: 
-        'header header header header header header'
-        'navbar navbar navbar navbar navbar navbar' 
-        'aside aside aside aside aside aside' 
-        'contenido contenido contenido contenido contenido contenido' 
-        'footer footer footer footer footer footer';
-    }
-  }
+/* propiedades generales mientras acomodamos el css */
+.header,
+.navbar,
+.aside,
+.contenido,
+.articulo,
+.footer {
+  background-color: DimGray;
+  border: solid 1px lightgrey;
+  text-align: center;
+}
 
-    /* propiedades generales mientras acomodamos el css */
-    .header,
-    .navbar,
-    .aside,
-    .contenido,
-    .articulo,
-    .footer
-    {
-      background-color: DimGray;
-      border: solid 1px lightgrey;
-      text-align: center;
-    }
+/* header */
+.header {
+  grid-area: header;
+  padding: 30px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  background-image: url('../imagenes/LogoCAB_2021-155x214.png');
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: 10%;
+  min-height: 250px;
+}
 
-  /* header */
-  .header {
-    grid-area: header;
-    padding: 30px;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    font-size: 30px;
-    background-image: url('../imagenes/LogoCAB_2021-155x214.png');
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-position: 10%;
-    min-height: 250px;
-  }
-
-  .header-titulo {
-    width: 30%;
-    text-align: left;
-    margin:5% 5% 5% 50%;
-  }
+.header-titulo {
+  width: 30%;
+  text-align: left;
+  margin: 5% 5% 5% 50%;
+}
 
 .header-titulo h1 {
-font-size: 2em;
-font-style: italic;
+  font-size: 2em;
+  font-style: italic;
 }
 
 .header-titulo p {
@@ -77,76 +76,78 @@ font-style: italic;
   line-height: 1.2;
 }
 
-  /* navbar */
-  .navbar {
-    grid-area: navbar;
-    padding: 10px;
-  }
+/* navbar */
+.navbar {
+  grid-area: navbar;
+  padding: 10px;
+}
 
-  .navbar a {
-    padding: 10px 50px;
-    text-decoration: none;
-    font-size: 1.25em;
-    color: white;
-  }
+.navbar a {
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: white;
+}
 
-  .navbar a:hover {
-    color: CadetBlue;
-  }
-  
-  /* aside */
-  .aside {
-    grid-area: aside;
-  }
+.navbar a:hover {
+  color: CadetBlue;
+}
 
-  .aside a {
-    margin: 10px;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-    color: white; 
-  }
-  
-  .aside a:hover {
-    color: CadetBlue;
-  }
-  /* contenido */
-  .contenido {
-    grid-area: contenido;
-  }
+/* aside */
+.aside {
+  grid-area: aside;
+}
+
+.aside a {
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.aside a:hover {
+  color: CadetBlue;
+}
+
+/* contenido */
+.contenido {
+  grid-area: contenido;
+}
 
 /* articulo */
-  .articulo {
+.articulo {
   margin: 20px;
   padding: 10px;
   font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
   font-size: 1em;
   font-weight: 400;
   text-align: left;
-  }
+  display: inline-block;
+}
 
-  /* articulo titulo */
-  .articulo h2 {
-    font-size: 1.75em;
-    font-weight: 600;
-    margin: 10px 10px;
-  }
+/* articulo titulo */
+.articulo h2 {
+  font-size: 1.75em;
+  font-weight: 600;
+  margin: 10px 10px;
+}
 
-  /* articulo parrafo */
-  .articulo-textos {
-    font-size: 1em;
-    font-weight: 400;
-    display: inline-block;
-    vertical-align: top;
-    width: 70%; 
-  }
+/* articulo parrafo */
+.articulo-textos {
+  font-size: 1em;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+}
 
-  /* espacio entre parrafos del bloque articulo-textos */
-  .articulo-textos p {
-    margin: 10px 0px;
-  }
+/* espacio entre parrafos del bloque articulo-textos */
+.articulo-textos p {
+  margin: 10px 0px;
+}
 
-  /* imagen artidulo */
+/* imagen artidulo */
 .articulo-imagen {
   margin: 10px;
   width: 25%;
@@ -155,38 +156,39 @@ font-style: italic;
   vertical-align: top;
   left: 0;
 }
-  /* footer */
-  .footer {
-    grid-area: footer;
-    padding: 10px;    
-    font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-  }
 
-  /* cada bloque del footer */
-  .footer-bloque {
-    border-radius: 10px;
-    border: solid 1px white;
-    flex: 1 1 auto;
-    max-width: 25%;
-    vertical-align: top;
-    text-align: left;
-    margin: 20px auto;
-    padding: 25px;
-    display: block;
-  }
+/* footer */
+.footer {
+  grid-area: footer;
+  padding: 10px;
+  font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
 
-  .footer div h2 {
-    margin: 15px;
-  }
+/* cada bloque del footer */
+.footer-bloque {
+  border-radius: 10px;
+  border: solid 1px white;
+  flex: 1 1 auto;
+  max-width: 25%;
+  vertical-align: top;
+  text-align: left;
+  margin: 20px auto;
+  padding: 25px;
+  display: block;
+}
+
+.footer div h2 {
+  margin: 15px;
+}
 
 .footer div p {
-    margin: 10px;
-} 
+  margin: 10px;
+}
 
 .footer-social a {
   width: 100%;
@@ -196,37 +198,37 @@ font-style: italic;
 }
 
 .footer-social a i {
-    color: white;
-    size: 20px;
-    margin: 10px;
+  color: white;
+  size: 20px;
+  margin: 10px;
 }
 
 .footer-bloque p i {
-    color: white;
-    size: 20px;
-    margin: 10px;
-  }
+  color: white;
+  size: 20px;
+  margin: 10px;
+}
 
 
 
-  /* Pagina Jugadores */
+/* Pagina Jugadores */
 
-  .jugador {
-border-radius: 20px;
-border: 1px solid white;
-margin: 10px;
-display: flex;
-  }
+.jugador {
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 10px;
+  display: flex;
+  max-height: 200px;
+  max-width: 400px;
+}
 
-  .jugador-foto {
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 20px;
-  }
+.jugador-foto {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+}
 
-  .jugador-texto{
-    display: flexbox;
-    margin: 10px 50px;
-  }
-
-      
+.jugador-texto {
+  display: inline-block;
+  margin: 10px 50px;
+}

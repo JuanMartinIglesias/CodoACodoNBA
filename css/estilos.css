@@ -207,4 +207,26 @@ font-style: italic;
     margin: 10px;
   }
 
+
+
+  /* Pagina Jugadores */
+
+  .jugador {
+border-radius: 20px;
+border: 1px solid white;
+margin: 10px;
+display: flex;
+  }
+
+  .jugador-foto {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 20px;
+  }
+
+  .jugador-texto{
+    display: flexbox;
+    margin: 10px 50px;
+  }
+
       

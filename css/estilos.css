@@ -213,6 +213,10 @@ body {
 
 /* Pagina Jugadores */
 
+.jugadores {
+display: block;
+}
+
 .jugador {
   border-radius: 20px;
   border: 1px solid white;

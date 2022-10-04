@@ -96,6 +96,7 @@ body {
 /* aside */
 .aside {
   grid-area: aside;
+  /* min-width: 25%; */
 }
 
 .aside a {
@@ -117,13 +118,13 @@ body {
 
 /* articulo */
 .articulo {
-  margin: 20px;
+  /* margin: 20px; */
   padding: 10px;
   font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
   font-size: 1em;
   font-weight: 400;
   text-align: left;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 /* articulo titulo */
@@ -213,17 +214,15 @@ body {
 
 /* Pagina Jugadores */
 
-.jugadores {
-display: block;
-}
-
 .jugador {
   border-radius: 20px;
   border: 1px solid white;
   margin: 10px;
-  display: flex;
+  display: inline-flex;
   max-height: 200px;
-  max-width: 400px;
+  min-width: 350px;
+  width: 30%;
+  overflow: hidden;
 }
 
 .jugador-foto {
@@ -234,5 +233,5 @@ display: block;
 
 .jugador-texto {
   display: inline-block;
-  margin: 10px 50px;
+  margin: 10px;
 }

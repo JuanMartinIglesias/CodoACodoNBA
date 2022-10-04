@@ -1,0 +1,23 @@
+/* Pagina Jugadores */
+
+.jugador {
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 10px;
+  display: inline-flex;
+  max-height: 200px;
+  min-width: 350px;
+  width: 30%;
+  overflow: hidden;
+}
+
+.jugador-foto {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+}
+
+.jugador-texto {
+  display: inline-block;
+  margin: 10px;
+}

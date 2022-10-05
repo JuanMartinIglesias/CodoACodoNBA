@@ -1,4 +1,9 @@
 /* Pagina Jugadores */
+.jugadores {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
 
 .jugador {
   border-radius: 20px;

@@ -21,17 +21,7 @@ body {
   grid-gap: 0px;
 }
 
-/* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-areas:
-      'header header header header header header'
-      'navbar navbar navbar navbar navbar navbar'
-      'aside aside aside aside aside aside'
-      'contenido contenido contenido contenido contenido contenido'
-      'footer footer footer footer footer footer';
-  }
-}
+
 
 /* propiedades generales mientras acomodamos el css */
 .header,
@@ -42,15 +32,12 @@ body {
 .footer {
   background-color: DimGray;
   border: solid 1px lightgrey;
-  text-align: center;
 }
 
 /* header */
 .header {
   grid-area: header;
-  padding: 30px;
   font-family: 'Lato', sans-serif;
-  text-align: center;
   font-size: 30px;
   background-image: url('../imagenes/LogoCAB_2021-155x214.png');
   background-repeat: no-repeat;
@@ -79,10 +66,13 @@ body {
 /* navbar */
 .navbar {
   grid-area: navbar;
-  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }
 
 .navbar a {
+  margin: 10px;
   padding: 10px 50px;
   text-decoration: none;
   font-size: 1.25em;
@@ -90,21 +80,24 @@ body {
 }
 
 .navbar a:hover {
-  color: CadetBlue;
+  color: white;
+  background-color:black;
 }
 
 /* aside */
 .aside {
   grid-area: aside;
-  /* min-width: 25%; */
+  width: 100%;
+  
 }
 
 .aside a {
+  display: block;
   margin: 10px;
   padding: 10px;
-  display: block;
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 
 .aside a:hover {
@@ -114,21 +107,26 @@ body {
 /* contenido */
 .contenido {
   grid-area: contenido;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 /* articulo */
 .articulo {
-  /* margin: 20px; */
   padding: 10px;
   font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
   font-size: 1em;
   font-weight: 400;
   text-align: left;
-  /* display: inline-block; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 /* articulo titulo */
 .articulo h2 {
+  width: 100%;
   font-size: 1.75em;
   font-weight: 600;
   margin: 10px 10px;
@@ -138,9 +136,12 @@ body {
 .articulo-textos {
   font-size: 1em;
   font-weight: 400;
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  flex-flow: column wrap-reverse;
+  justify-content: flex-start;
   width: 70%;
+  min-width: 500px;
+  max-width: 900px;
 }
 
 /* espacio entre parrafos del bloque articulo-textos */
@@ -148,39 +149,36 @@ body {
   margin: 10px 0px;
 }
 
-/* imagen artidulo */
+/* imagen articulo */
 .articulo-imagen {
   margin: 10px;
   width: 25%;
+  max-width: 500px;
+  min-width: 200px;
   height: auto;
   border-radius: 15px;
-  vertical-align: top;
-  left: 0;
 }
 
 /* footer */
 .footer {
   grid-area: footer;
-  padding: 10px;
+  width: 100%;
   font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
   color: white;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 /* cada bloque del footer */
 .footer-bloque {
   border-radius: 10px;
   border: solid 1px white;
-  flex: 1 1 auto;
-  max-width: 25%;
-  vertical-align: top;
+  width: 25%;
+  min-width: 200px;
   text-align: left;
   margin: 20px auto;
   padding: 25px;
-  display: block;
 }
 
 .footer div h2 {
@@ -208,4 +206,45 @@ body {
   color: white;
   size: 20px;
   margin: 10px;
+}
+
+/* Responsive layout - hace que aside tome 2 columnas */
+@media (max-width: 1140px) {
+  .grid-container {
+    grid-template-areas:
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'aside aside contenido contenido contenido contenido'
+    'footer footer footer footer footer footer';
+  }
+}
+
+/* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      'header header header header header header'
+      'navbar navbar navbar navbar navbar navbar'
+      'aside aside aside aside aside aside'
+      'contenido contenido contenido contenido contenido contenido'
+      'footer footer footer footer footer footer';
+  }
+
+  .aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .articulo-imagen {
+    width: 100%;
+  }
+
+  .articulo-textos{
+    width: 100%;
+  }
+
+  .footer-bloque {
+    width: 100%;
+  }
 }

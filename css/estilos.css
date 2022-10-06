@@ -88,10 +88,12 @@ body {
 .aside {
   grid-area: aside;
   width: 100%;
-  
+  min-width: 200px;
+  display: flex;
+  flex-flow: column wrap; 
 }
 
-.aside a {
+.aside h2, h3, a {
   display: block;
   margin: 10px;
   padding: 10px;

@@ -1,0 +1,252 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Lato', 'PT Sans', sans-serif;
+  margin: 0 5%;
+  background-color: SlateGray;
+  color: white;
+}
+
+/* grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'aside contenido contenido contenido contenido contenido'
+    'footer footer footer footer footer footer';
+  grid-gap: 0px;
+}
+
+
+
+/* propiedades generales mientras acomodamos el css */
+.header,
+.navbar,
+.aside,
+.contenido,
+.articulo,
+.footer {
+  background-color: DimGray;
+  border: solid 1px lightgrey;
+}
+
+/* header */
+.header {
+  grid-area: header;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  background-image: url('../imagenes/LogoCAB_2021-155x214.png');
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: 10%;
+  min-height: 250px;
+}
+
+.header-titulo {
+  width: 30%;
+  text-align: left;
+  margin: 5% 5% 5% 50%;
+}
+
+.header-titulo h1 {
+  font-size: 2em;
+  font-style: italic;
+}
+
+.header-titulo p {
+  font-size: 0.75em;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+/* navbar */
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.navbar a {
+  margin: 10px;
+  padding: 10px 50px;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: white;
+}
+
+.navbar a:hover {
+  color: white;
+  background-color:black;
+}
+
+/* aside */
+.aside {
+  grid-area: aside;
+  width: 100%;
+  min-width: 200px;
+  display: flex;
+  flex-flow: column wrap; 
+}
+
+.aside h2, h3, a {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.aside a:hover {
+  color: CadetBlue;
+}
+
+/* contenido */
+.contenido {
+  grid-area: contenido;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* articulo */
+.articulo {
+  padding: 10px;
+  font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+/* articulo titulo */
+.articulo h2 {
+  width: 100%;
+  font-size: 1.75em;
+  font-weight: 600;
+  margin: 10px 10px;
+}
+
+/* articulo parrafo */
+.articulo-textos {
+  font-size: 1em;
+  font-weight: 400;
+  display: flex;
+  flex-flow: column wrap-reverse;
+  justify-content: flex-start;
+  width: 70%;
+  min-width: 500px;
+  max-width: 900px;
+}
+
+/* espacio entre parrafos del bloque articulo-textos */
+.articulo-textos p {
+  margin: 10px 0px;
+}
+
+/* imagen articulo */
+.articulo-imagen {
+  margin: 10px;
+  width: 25%;
+  max-width: 500px;
+  min-width: 200px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* footer */
+.footer {
+  grid-area: footer;
+  width: 100%;
+  font-family: 'PT Sans', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+/* cada bloque del footer */
+.footer-bloque {
+  border-radius: 10px;
+  border: solid 1px white;
+  width: 25%;
+  min-width: 200px;
+  text-align: left;
+  margin: 20px auto;
+  padding: 25px;
+}
+
+.footer div h2 {
+  margin: 15px;
+}
+
+.footer div p {
+  margin: 10px;
+}
+
+.footer-social a {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-social a i {
+  color: white;
+  size: 20px;
+  margin: 10px;
+}
+
+.footer-bloque p i {
+  color: white;
+  size: 20px;
+  margin: 10px;
+}
+
+/* Responsive layout - hace que aside tome 2 columnas */
+@media (max-width: 1140px) {
+  .grid-container {
+    grid-template-areas:
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'aside aside contenido contenido contenido contenido'
+    'footer footer footer footer footer footer';
+  }
+}
+
+/* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      'header header header header header header'
+      'navbar navbar navbar navbar navbar navbar'
+      'aside aside aside aside aside aside'
+      'contenido contenido contenido contenido contenido contenido'
+      'footer footer footer footer footer footer';
+  }
+
+  .aside {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .articulo-imagen {
+    width: 100%;
+  }
+
+  .articulo-textos{
+    width: 100%;
+  }
+
+  .footer-bloque {
+    width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+/* Pagina Contactos */
+
+.aside {
+  display: none;
+}
+
+.jugadores {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+}
+
+.jugador {
+  border-radius: 20px;
+  border: 1px solid white;
+  margin: 10px;
+  display: inline-flex;
+  max-height: 200px;
+  min-width: 350px;
+  width: 30%;
+  overflow: hidden;
+}
+
+.jugador-foto {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+}
+
+.jugador-texto {
+  display: inline-block;
+  margin: 10px;
+}
+
+
+/* grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'contenido contenido contenido contenido contenido contenido'
+    'footer footer footer footer footer footer';
+  grid-gap: 0px;
+}
+
+/* Responsive layout - hace que aside tome 2 columnas */
+@media (max-width: 1140px) {
+  .grid-container {
+    grid-template-areas:
+    'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'contenido contenido contenido contenido contenido contenido'
+    'footer footer footer footer footer footer';
+  }
+}
+
+/* Responsive layout - hace que se apilen las columnas navbar, aside y contenido */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      'header header header header header header'
+      'navbar navbar navbar navbar navbar navbar'
+      'contenido contenido contenido contenido contenido contenido'
+      'footer footer footer footer footer footer';
+  }

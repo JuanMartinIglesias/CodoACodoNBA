@@ -1,37 +1,77 @@
 /* Pagina Contactos */
 
-.aside {
-  display: none;
+.aside a,
+.aside h2 {
+  width: 100%;
+  font-size: 3vh;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
 }
 
-.jugadores {
+.aside h2 {
+  margin-top: 3vh;
+  font-size: 3vh;
+}
+
+.articulo-textos {
+  font-weight: 400;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap-reverse;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 500px;
+  /* max-width: 900px; */
+}
+
+.articulo-titulo1 {
+  text-align: left;
+}
+
+/* formulario */
+.formulario {
+text-align: left;
+font-size: 3vh;
+width: 50%;
+min-width: 500px;
+margin: 4vh auto;
+}
+
+label {
+  width: 100%;
+  margin-top: 3vh;
+}
+
+input {
+  width: 100%;
+  height: 5vh;
+  margin: 10px 0;
+}
+
+textarea {
+  width: 100%;
+}
+
+.checkbox {
+  display: flex;
   flex-direction: row;
+  text-align: left;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 auto;
 }
 
-.jugador {
-  border-radius: 20px;
-  border: 1px solid white;
+.checkbox input {
+  font-size: 2vh;
   margin: 10px;
-  display: inline-flex;
-  max-height: 200px;
-  min-width: 350px;
-  width: 30%;
-  overflow: hidden;
+  width: 5vh;
 }
 
-.jugador-foto {
-  height: 150px;
-  width: 150px;
-  border-radius: 20px;
+.fterminos {
+  font-size: 2.5vh;
 }
-
-.jugador-texto {
-  display: inline-block;
-  margin: 10px;
-}
-
 
 /* grid container */
 .grid-container {

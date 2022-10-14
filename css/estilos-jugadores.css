@@ -1,9 +1,6 @@
 /* Pagina Jugadores */
 
 /* aside */
-.aside h2 {
-  margin: 10px 0;
-}
 
 .aside a,
 .aside h2 {
@@ -14,6 +11,11 @@
   margin: 0;
   text-decoration: none;
   text-align: center;
+}
+
+.aside h2 {
+  margin-top: 3vh;
+  font-size: 2vh;
 }
 
 .articulo-titulo1 {

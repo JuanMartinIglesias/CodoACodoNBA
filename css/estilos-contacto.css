@@ -23,10 +23,12 @@
   justify-content: flex-start;
   width: 100%;
   min-width: 500px;
-  /* max-width: 900px; */
+  margin: 0 auto;
 }
 
 .articulo-titulo1 {
+  margin: 0 auto;
+  max-width: 900px;
   text-align: left;
 }
 
@@ -55,22 +57,43 @@ textarea {
 }
 
 .checkbox {
-  display: flex;
-  flex-direction: row;
+  width: 80%;
   text-align: left;
-  align-items: flex-start;
-  align-content: flex-start;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items:center ;
 }
 
 .checkbox input {
-  font-size: 2vh;
+  font-size: 3vh;
   margin: 10px;
-  width: 5vh;
+  width: 4vh;
 }
 
 .fterminos {
   font-size: 2.5vh;
+  margin: 0 10px;
+}
+
+#btn {
+  display: block;
+  width: 30%;
+  height: auto;
+  font-size: 3vh;
+  color: white;
+  background-color: #b72204;
+  border: solid 2px white;
+  border-radius: 15px;
+  margin: 5vh auto;
+  padding: 5px;
+}
+
+#btn:hover {
+  color: black;
+  background-color: #fb8c27;
 }
 
 /* grid container */

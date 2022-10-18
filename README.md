@@ -19,7 +19,7 @@ tamaños de dispositivos distintos.
 [OK] Incorporar al menos una animación, transformación o una transición (se deberá
 indicar en qué parte del sitio web fue incorporada la animación).
 [OK] Poseer una estructura HTML maquetada con Flexbox y/o Grid.
-[X] Consumir una API Rest desde JavaScript. Deberá informar la API utilizada al
+[OK] Consumir una API Rest desde JavaScript. Deberá informar la API utilizada al
 momento de entregar el TPO.
 [] En caso de querer utilizar Bootstrap (no es obligatorio), sólo podrá hacerlo en la
 página del formulario del sitio web. No se aceptarán proyectos desarrollados
@@ -27,7 +27,7 @@ página del formulario del sitio web. No se aceptarán proyectos desarrollados
 similar).
 [OK] El desarrollo web deberá subirse a un servidor on-line para poder ser navegada por
 el Docente. Ejemplo: GitHub Pages, Netlify o similares.
-[X] Además de los aspectos técnicos mencionados anteriormente, el proyecto deberá
+[OK] Además de los aspectos técnicos mencionados anteriormente, el proyecto deberá
 contemplar aspectos de diseño los cuales también serán evaluados por el Docente.
 Para eso se recomienda que vean el material disponible en el Aula Virtual.
 Seminario de Diseño Web: https://youtu.be/fVkGt2tYIj0. Para más información, ver

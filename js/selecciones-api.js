@@ -9,11 +9,15 @@ fetch('https://rickandmortyapi.com/api/character')
         printJugadores(json.results);
     });
 
+
 // Inserta todos los jugadores insertando un HTML dentro del #container (container se inserta en "jugadores")
 function printJugadores(personajes) {
 
     //Selecciona donde insertar las cards
     const container = document.querySelector('.jugadores')
+
+    //borra cards anteriores
+    container.innerHTML = ``
 
     //Para cada elemento (personaje) del array (personajes)
     personajes.forEach(personaje => {
@@ -42,17 +46,17 @@ function printJugadores(personajes) {
 }
 
 
-// Actualizar Cards, primero eliminar las cards con la función eliminarCard, y luego insertara as correspondientes
+// Actualizar Cards, pide a la API información con fetch y inserta las Cards con printJugadores
 function actualizaCard(pagina) {
-    //  eliminarCard(); todavía no funciona
-    console.log(pagina);
-    console.log("https://rickandmortyapi.com/api/character/?page=2");
-    console.log(`https://rickandmortyapi.com/api/character/?page=${pagina}`);
     
-        fetch(`https://rickandmortyapi.com/api/character/?page=${pagina}`)
-            .then(response => response.json())
-            .then(json => {
+    // Comprueba que estamos enviando a la API la página correcta
+    // console.log(pagina);
+    // console.log("https://rickandmortyapi.com/api/character/?page=2");
+    // console.log(`https://rickandmortyapi.com/api/character/?page=${pagina}`);
+
+    fetch(`https://rickandmortyapi.com/api/character/?page=${pagina}`)
+        .then(response => response.json())
+        .then(json => {
             printJugadores(json.results);
-            });
-    }
-    
+        });
+}

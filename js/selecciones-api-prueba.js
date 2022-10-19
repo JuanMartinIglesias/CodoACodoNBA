@@ -15,6 +15,9 @@ function printJugadores(personajes) {
     //Selecciona donde insertar las cards
     const container = document.querySelector('.jugadores')
 
+    //borra cards anteriores?
+    container.innerHTML = ``
+
     //Para cada elemento (personaje) del array (personajes)
     personajes.forEach(personaje => {
         //muestro x consola datos, estos son los datos que extraigo del json para usar en las cards

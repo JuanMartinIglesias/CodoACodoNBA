@@ -40,3 +40,19 @@ function printJugadores(personajes) {
     `;
     });
 }
+
+
+// Actualizar Cards, primero eliminar las cards con la función eliminarCard, y luego insertara as correspondientes
+function actualizaCard(pagina) {
+    //  eliminarCard(); todavía no funciona
+    console.log(pagina);
+    console.log("https://rickandmortyapi.com/api/character/?page=2");
+    console.log(`https://rickandmortyapi.com/api/character/?page=${pagina}`);
+    
+        fetch(`https://rickandmortyapi.com/api/character/?page=${pagina}`)
+            .then(response => response.json())
+            .then(json => {
+            printJugadores(json.results);
+            });
+    }
+    
